@@ -1,0 +1,185 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Hanken Grotesk", Arial, sans-serif;
+	background-color: #262626;
+	color: #d9d9d9;
+	padding: 20px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 4px;
+}
+
+.title {
+	color: #f9f4da;
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin: 0;
+}
+
+.description {
+	color: #8e8e8e;
+	font-size: 0.95rem;
+	margin: 0;
+}
+
+.status {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	min-height: 60px;
+	padding: 6px;
+	border-radius: 4px;
+}
+
+.status--win {
+	background-color: #10a95b;
+}
+
+.status--lose {
+	background-color: #ba2a2a;
+}
+
+.status--farewell {
+	border: dashed 2px #262626;
+	background-color: #7a5ea7;
+	font-style: italic;
+}
+
+.status__title,
+.status__subtitle {
+	margin: 0;
+	font-size: 1.3rem;
+	font-weight: 500;
+
+	color: #f9f4da;
+}
+
+.status__subtitle {
+	font-size: 1.15rem;
+	margin-top: 6px;
+}
+
+.sacrifices__container {
+	margin: auto;
+	max-width: 350px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.sacrifice--item {
+	padding: 5px;
+	border-radius: 4px;
+	position: relative;
+}
+
+.sacrifice--item.lost::before {
+	content: "💀";
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	font-size: 0.85rem;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 4px;
+}
+
+.word {
+	display: flex;
+	justify-content: center;
+	gap: 2px;
+}
+
+.secret__letter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	border-bottom: solid 1px #f9f4da;
+	background-color: #323232;
+
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+.keyboard {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+
+.keyboard__letter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+
+	font-family: "Hanken Grotesk", Arial, sans-serif;
+	font-weight: 600;
+	font-size: 1.1rem;
+
+	border: solid 1px #d7d7d7;
+	border-radius: 4px;
+	color: #1e1e1e;
+	background-color: #fcba29;
+	cursor: pointer;
+}
+
+.keyboard__letter--correct,
+.keyboard__letter--wrong {
+	cursor: default;
+}
+
+.keyboard__letter--correct {
+	background-color: #10a95b;
+}
+
+.keyboard__letter--wrong {
+	background-color: #ec5d49;
+}
+
+.bottom__button {
+	font-family: "Hanken Grotesk", Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.15rem;
+	margin: auto;
+	width: 230px;
+	padding: 12px;
+	background-color: #11b5e5;
+	border: solid 1px #d7d7d7;
+	border-radius: 4px;
+}
+
+.hidden {
+	display: none !important;
+}
